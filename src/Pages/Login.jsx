@@ -1,12 +1,21 @@
+import React, { useState } from 'react';
+import { Form, Button } from 'react-bootstrap';
+import './../assets/css/rectangle.css';
+
 const Login = () => {
-    return (
-        <div>
-            <h1>Login Component</h1>
-            {/* Other login-related content */}
-        </div>
-        );
-    }
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
+  const handleLogin = () => {
+    // Implement login logic
+    console.log('Logging in...');
+  };
 
-    export default Login;
-    
+  return (
+    <div className="rectangle">
+  
+    </div>
+  );
+};
+
+export default Login;
