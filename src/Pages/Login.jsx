@@ -17,45 +17,38 @@ const Login = () => {
     console.log('Logging in...');
   };
 
-  const maskedPassword = '*'.repeat(password.length); 
+ 
 
   return (
-    <div className="rectangle">
-        <div className="login-wrapper">
-            <div className="login-form">
-                
-            </div>
+    <div className='wrappper'>
+     <form action=''>
+      <h1>E-commerce</h1>
+      
+      <div className='input-box'>
+    
+        <input type='text' placeholder='ellie@gmail.com' required></input>
+        <i class='bx bx-envelope'></i>
 
-        <form onSubmit={handleLogin}>
-            <label_Ecomerce> E-commerce</label_Ecomerce>
-            <InputFrame>
-          <label_input>Email:</label_input>
-          <input
-            type="email"
-            placeholder="ellie@gmail.com"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </InputFrame>
+      </div>
 
-        <InputFrame>
-          <label>Password:</label>
-          <input
-           type="text"  // Use type="text" to display the masked password
-           value={maskedPassword}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </InputFrame>
+      <div className='input-box'>
+       
+        <input type='password' placeholder='****' required></input>
+        <i class='bx bxs-lock-alt' ></i>
+      </div>
 
-        <button type="submit">
-            <text  >go to store </text>
-            <span>&rarr;</span>
-            </button>    
-
-        </form>
-       </div>
+      <div className='remember-forgot'>
+        <label className='remember-forgot-label' >
+          <input type="checkbox"></input>
+          Remember me
+          </label>
+          <a href='#'> Forgot Password</a>
+      </div>
+    
+      <button type='submit' className='btn' >Login</button>
+    
+    
+     </form>
     </div>
   );
 };
